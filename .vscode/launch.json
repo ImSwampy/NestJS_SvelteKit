@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "docker-compose",
+            "type": "f5anything",
+            "request": "launch",
+            "command": "cd ./backend && sudo docker-compose up -d"
+        },
+        {
+            "name": "docker-kill",
+            "type": "f5anything",
+            "request": "launch",
+            "command": "cd ./backend && sudo docker stop backend-db-1"
+        },
+        {
+            "name": "Nest Run Dev",
+            "type": "f5anything",
+            "request": "launch",
+            "command": "cd ./backend && npm run start:dev"
+        },
+        {
+            "name": "Run App",
+            "type": "f5anything",
+            "request": "launch",
+            "command": "cd ./backend && sudo docker-compose up -d && npm run start:dev"
+        },
+    ]
+}
