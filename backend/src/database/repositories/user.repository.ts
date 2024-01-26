@@ -15,8 +15,8 @@ export class UserRepo {
         return this.UserRepo.find();
     }
 
-    async findOneUser(id) {
-        return await this.UserRepo.findOne(id);
+    async findOneUser(Id) {
+        return await this.UserRepo.findOne({ where: Id });
     }
 
     createUser(user: UserDto) {
